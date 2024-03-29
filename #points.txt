@@ -50,10 +50,10 @@ osStatus osDelayUntil (uint32_t *PreviousWakeTime, uint32_t millisec);
 ________________________________________
 ################## Other Points
 
-1. We should describe tasks with different priorities when using same resource
+1. We should describe tasks with different priorities when using same resource => RTOS_S0
 for example if we have 3 threads and all of them want to send data via UART1 every 1 second, we should describe and initilize them with different priorities.
 
-2. vTaskDelayUntil is enabled in RTOS_S1
+2. vTaskDelayUntil is enabled in => RTOS_S1
 vTaskDelayUntil Parameter Description: It is one of the macros allowing those components of the real time kernel not utilized by your application to be excluded from your build. - this ensures the RTOS does not use any more ROM or RAM than necessary for your particular embedded application. To include the vTaskDelayUntil() API function, set vTaskDelayUntil to 1 (Enabled).
 
 3.
